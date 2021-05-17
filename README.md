@@ -36,16 +36,19 @@ Pode ter um arquivo para cada modulo exemplo: main.tf do S3 outro do EC2 e etc
 7ºPASSO
 Estrutura basica para criação de uma buckets3 
 #ESTE INDICA A VERSÃO DO TERRAFORM
+
 terraform {
     required_version = ">= 0.12.25"      
 }
 
 #(este indica seu provider, sendo aws, gcloud e demais, e a região do AZ)
+
 provider "aws" {                                      
     region = "us-east-1"
 }
 
 #(este realiza a criação de um bucket na aws s3 com nome do bucket e a regra de acl)
+
 resource "aws_s3_bucket" "terraform-teste-wayner2" {
     bucket = "waynerferreiraaws2"
     acl = "private"
