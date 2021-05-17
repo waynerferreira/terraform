@@ -54,4 +54,16 @@ resource "aws_s3_bucket" "terraform-teste-wayner2" {
     acl = "private"
 }
 
+#######################################
+8ºpasso 
+no vscode, na parte do terminal, provavelmente estará a opção do powershell ou terminal bash caso linux
+da o comando
+terraform init
+para ele criar a estrutura que vc setou no codigo execute o comando
+terraform plan
+#no final do comando ele vai orientar que vai adicionar algo que vc esta solicitando e solicita o comando abaixo:
+terraform apply
+#por fim ele solicita mais uma permissão de yes / no:
+yes
+Por fim o processo é criado , podendo conferir via browser
 
