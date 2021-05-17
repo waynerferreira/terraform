@@ -34,10 +34,8 @@ Nomeie o mesmo como main.tf que será o arquivo de construção da estrutura
 Pode ter um arquivo para cada modulo exemplo: main.tf do S3 outro do EC2 e etc
 
 7ºPASSO
-Estrutura basica para criação de uma buckets3
-
-
-# (este indica a versão do terraform)
+Estrutura basica para criação de uma buckets3 
+#ESTE INDICA A VERSÃO DO TERRAFORM
 terraform {
     required_version = ">= 0.12.25"      
 }
