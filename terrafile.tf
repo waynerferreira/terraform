@@ -1,8 +1,8 @@
 module "servers" {
     source = "./servers"
-    servers = 0
+    servers = 2
 }
-module "instance_ips" {
+output "instance_ips" {
     value  = "${module.servers.instance_ips}"
 }
 
