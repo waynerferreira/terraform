@@ -25,7 +25,7 @@ resource "aws_subnet" "subnet-testeB" {
     Name = "subnet-testeB"
   }
 }
-/*
+
 resource "aws_network_acl" "acl_teste" {
   vpc_id = "${var.vpcteste}"
   subnet_ids = [aws_subnet.subnet-testeA.id]
@@ -112,4 +112,3 @@ resource "aws_route_table_association" "rt-subnet-testeA" {
 
  }
 
-*/

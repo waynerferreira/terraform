@@ -13,10 +13,10 @@ variable "vpcteste" {
     default = "vpc-078756f533829c25a"
 }
 variable "subnet-testeA"{
-    default = "subnet-0ba91aa09bd8cfbbf"
+    default = "subnet-099f492bd64c488b8"
 }
 variable "subnet-testeB"{
-    default = "subnet-017d24f156c0dc554"
+    default = "subnet-0df6a0b946c26a8e1"
 }
 
 variable "sg_teste" {
