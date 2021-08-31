@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
    count = "${var.servers}"
     ami = "ami-07d02ee1eeb0c996c"
-    instance_type = "t2.micro"
+    instance_type = "t2.medium"
 
    /*dynamic "ebs_block_device"{
         for_each = "${var.blocks}" 
