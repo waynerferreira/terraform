@@ -10,7 +10,7 @@ variable "cdirs_acesso_remoto" {
     default = ["0.0.0.0/0"]
 }
 variable "vpcteste" {
-    default = "vpc-078756f533829c25a"
+    default = "vpc-05e4bfbf22ea3c3e6"
 }
 variable "subnet-testeA"{
     default = "subnet-099f492bd64c488b8"
@@ -18,12 +18,14 @@ variable "subnet-testeA"{
 variable "subnet-testeB"{
     default = "subnet-0df6a0b946c26a8e1"
 }
-
+variable "acl_teste"{
+    default = "acl-0b8cc6c418522f858"
+}
 variable "sg_teste" {
     #type = map
 #   description = "sg-0714a8294df4cb3ad"
     default = {
-    aws_security_group = "sg-027a7177110ebb60d"
+    aws_security_group = "sg-0c3d1c6d80cbc56d5"
     }
 }
 variable "igw-teste" {
@@ -31,7 +33,7 @@ variable "igw-teste" {
 }
 
 variable "rt-teste" {
-    default = "rtb-0ac57c12707d5e993"
+    default = "rtb-03cbfc4703895832c"
   
 }
 variable "key_name" {
