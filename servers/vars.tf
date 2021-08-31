@@ -28,14 +28,7 @@ variable "sg_teste" {
     aws_security_group = "sg-0dc0d2e9ca89ae892"
     }
 }
-variable "igw-teste" {
-    default = "igw-08c30a5c175d143bb"
-}
 
-variable "rt-teste" {
-    default = "rtb-03cbfc4703895832c"
-  
-}
 variable "key_name" {
     default = "chaveaws-local"
 }
