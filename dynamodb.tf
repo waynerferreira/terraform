@@ -1,4 +1,4 @@
-resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
+/*resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
   name           = "terraform-state-lock-dynamo"
   hash_key       = "LockID"
   read_capacity  = 20
@@ -14,3 +14,4 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
       Name = "DynamoDB Terraform State Lock Table"
   }
 }  
+*/
