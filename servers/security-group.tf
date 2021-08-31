@@ -1,6 +1,6 @@
 resource "aws_security_group_rule" "sg_teste" {
   vpc_id = "${var.vpcteste}"
-  security_group_id = "sg-0c3d1c6d80cbc56d5"
+  security_group_id = "${var.sg_teste}"
   ingress {
     from_port = 0
     to_port   = 65535
