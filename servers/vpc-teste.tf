@@ -107,7 +107,7 @@ resource "aws_route" "rotas-teste" {
   depends_on = [aws_route_table.rt-teste]
 }
 resource "aws_route_table_association" "rt-subnet-testeA" {
-  subnet_id = "subnet-0ba91aa09bd8cfbbf"
+  subnet_id = "subnet-099f492bd64c488b8"
   route_table_id = "rtb-0ac57c12707d5e993"
 
  }
