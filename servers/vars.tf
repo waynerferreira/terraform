@@ -22,14 +22,14 @@ variable "acl_teste"{
     default = "acl-0b8cc6c418522f858"
 }
 
-variable "sg_teste" {
+/*variable "sg_teste" {
     #type = map
 #   description = "sg-0714a8294df4cb3ad"
     default = {
     aws_security_group = "sg-0c3d1c6d80cbc56d5"
     }
 }
-
+*/
 variable "key_name" {
     default = "chaveaws-local"
 }

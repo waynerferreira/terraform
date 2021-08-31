@@ -1,7 +1,6 @@
-resource "aws_security_group_rule" "sg_teste" {
+resource "aws_security_group" "sg_teste" {
   vpc_id = "${var.vpcteste}"
-  security_group_id = "${var.sg_teste}"
-  ingress {
+    ingress {
     from_port = 0
     to_port   = 65535
     protocol = "TCP"
