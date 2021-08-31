@@ -25,11 +25,11 @@ variable "sg_teste" {
     #type = map
 #   description = "sg-0714a8294df4cb3ad"
     default = {
-    aws_security_group = "sg-0c3d1c6d80cbc56d5"
+    aws_security_group = "sg-0dc0d2e9ca89ae892"
     }
 }
 variable "igw-teste" {
-    default = "igw-0101990dce7045f2c"
+    default = "igw-08c30a5c175d143bb"
 }
 
 variable "rt-teste" {
