@@ -93,13 +93,13 @@ resource "aws_internet_gateway" "igw-teste" {
       Name = "igw-teste"
     }
 }    
-resource "aws_route_table" "rt-teste" {
+resource "aws_default_route_table" "rt-teste" {
   vpc_id = "${var.vpcteste}"
   tags = {
     Name = "rt-teste"
   }
 }
-resource "aws_route" "rotas-teste" {
+resource "aws_default_route" "rotas-teste" {
   route_table_id = "${aws_route_table.rt-teste.id}"
   destination_cidr_block = "0.0.0.0/0"
   gateway_id = "${aws_internet_gateway.igw-teste.id}"

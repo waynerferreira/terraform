@@ -1,4 +1,4 @@
-resource "aws_security_group" "sg_teste" {
+resource "aws_default_security_group" "sg_teste" {
   vpc_id = "${var.vpcteste}"
   ingress {
     from_port = 0
