@@ -23,7 +23,7 @@ variable "sg_teste" {
     #type = map
 #   description = "sg-0714a8294df4cb3ad"
     default = {
-    aws_security_group = "sg-0714a8294df4cb3ad"
+    aws_security_group = "sg-027a7177110ebb60d"
     }
 }
 
