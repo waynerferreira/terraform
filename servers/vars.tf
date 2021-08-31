@@ -21,6 +21,7 @@ variable "subnet-testeB"{
 variable "acl_teste"{
     default = "acl-0b8cc6c418522f858"
 }
+/*
 variable "sg_teste" {
     #type = map
 #   description = "sg-0714a8294df4cb3ad"
@@ -28,7 +29,7 @@ variable "sg_teste" {
     aws_security_group = "sg-0dc0d2e9ca89ae892"
     }
 }
-
+*/
 variable "key_name" {
     default = "chaveaws-local"
 }
