@@ -21,6 +21,9 @@ variable "subnet-testeB"{
 variable "acl_teste"{
     default = "acl-0b8cc6c418522f858"
 }
+variable "igw-teste"{
+    default = "igw-01b34e3412c0e2779"
+}
 
 /*variable "sg_teste" {
     #type = map
