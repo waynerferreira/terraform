@@ -28,7 +28,7 @@ resource "aws_subnet" "subnet-testeB" {
 
 resource "aws_network_acl" "acl_teste" {
   vpc_id = "${var.vpcteste}"
-  subnet_ids = "${aws_subnet.subnet-testeA.id,aws_subnet.subnet-testeB}"
+  subnet_ids = "$${aws_subnet.subnet-testeA.id,aws_subnet.subnet-testeB}"
     tags = {
     name = "acl_teste"
   }
