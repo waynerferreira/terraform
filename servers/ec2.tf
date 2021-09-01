@@ -18,7 +18,7 @@ resource "aws_instance" "web" {
         Name = "k8s${count.index}"
     }
     subnet_id = "${var.subnet-testeA}"
-    vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
+    vpc_security_group_ids = "sg-0d53093b2c08b85a6"
     key_name = "${var.key_name}"
 }
 
@@ -76,6 +76,6 @@ resource "aws_instance" "k8stesteb" {
         Name = "k8stesteb${count.index}"
     }
     subnet_id = "${var.subnet-testeB}"
-    vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
+    vpc_security_group_ids = "sg-0d53093b2c08b85a6"
     key_name = "${var.key_name}"
 }
