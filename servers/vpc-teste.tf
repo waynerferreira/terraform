@@ -28,7 +28,7 @@ resource "aws_subnet" "subnet-testeB" {
 
 resource "aws_network_acl" "acl_teste" {
   vpc_id = "${var.vpcteste}"
-  subnet_ids = ["${aws_subnet.subnet-testeA.id}"]
+  subnet_ids = [aws_subnet.subnet-testeA.id]
     tags = {
     name = "acl_teste"
   }
@@ -104,7 +104,7 @@ resource "aws_route" "rotas-teste" {
   destination_cidr_block = "0.0.0.0/0"
   gateway_id = "${aws_internet_gateway.igw-teste.id}"
 
-  depends_on = ["${aws_route_table.rt-teste}"]
+  depends_on = [aws_route_table.rt-teste]
 }
 resource "aws_route_table_association" "rt-subnet-testeA" {
   subnet_id = "${var.subnet-testeA}"
