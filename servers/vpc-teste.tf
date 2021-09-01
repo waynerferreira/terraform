@@ -86,6 +86,66 @@ egress {
      
 }
 
+resource "aws_network_acl" "acl_teste" {
+  vpc_id = "${var.vpcteste}"
+  subnet_ids = [aws_subnet.subnet-testeB.id]
+    tags = {
+    name = "acl_teste"
+  }
+  ingress {
+    protocol   = -1
+    rule_no    = 100
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 0
+    to_port    = 0
+  }
+
+  egress {
+    protocol   = -1
+    rule_no    = 100
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 0
+    to_port    = 0
+  }
+
+
+egress {
+    protocol   = "tcp"
+    rule_no    = 200
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 443
+    to_port    = 443
+  }
+    ingress {
+    protocol   = "tcp"
+    rule_no    = 200
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 443
+    to_port    = 443
+  }
+  egress {
+    protocol   = "tcp"
+    rule_no    = 300
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 80
+    to_port    = 80
+  }
+    ingress {
+    protocol   = "tcp"
+    rule_no    = 300
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 80
+    to_port    = 80
+  }
+     
+}
+
 resource "aws_internet_gateway" "igw-teste" {
     vpc_id = "${var.vpcteste}"
 
@@ -111,4 +171,10 @@ resource "aws_route_table_association" "rt-subnet-testeA" {
   route_table_id = "rtb-02711fa49579500ca"
 
  }
+resource "aws_route_table_association" "rt-subnet-testeB" {
+  subnet_id = "${var.subnet-testeB}"
+  route_table_id = "rtb-02711fa49579500ca"
+
+ }
+
 
