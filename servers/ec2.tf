@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
    count = "${var.servers}"
     ami = "ami-07d02ee1eeb0c996c"
-    instance_type = "t2.medium"
+    instance_type = "t2.micro"
 
    /*dynamic "ebs_block_device"{
         for_each = "${var.blocks}" 
@@ -70,8 +70,8 @@ resource "aws_instance" "k8s" {
 
 resource "aws_instance" "k8stesteb" {
     count = 1
-    ami = "ami-08b2293fdd2deba2a"
-    instance_type = "t2.medium"
+    ami = "ami-07d02ee1eeb0c996c"
+    instance_type = "t2.micro"
     tags = {
         Name = "k8stesteb${count.index}"
     }
