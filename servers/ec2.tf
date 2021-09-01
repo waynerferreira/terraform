@@ -66,17 +66,16 @@ resource "aws_instance" "k8s" {
     vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
     key_name = var.key_name
 }
+*/
 
-
-resource "aws_instance" "k8s" {
+resource "aws_instance" "k8stesteb" {
     count = 1
-    ami = var.amis["us-east-1"]
+    ami = "ami-08b2293fdd2deba2a"
     instance_type = "t2.medium"
     tags = {
-        Name = "k8s${count.index}"
+        Name = "k8stesteb${count.index}"
     }
-    subnet_id = "subnet-0066472a5254ee7ef"
+    subnet_id = "${var.subnet-testeB}"
     vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
-    key_name = var.key_name
+    key_name = "${var.key_name}"
 }
-*/
