@@ -20,6 +20,7 @@ resource "aws_subnet" "subnet-testeB" {
   vpc_id     = "${var.vpcteste}"
   cidr_block = "10.0.2.0/24"
   availability_zone_id = "use1-az4"
+  map_public_ip_on_launch = true
   
   tags = {
     Name = "subnet-testeB"
