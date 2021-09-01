@@ -28,67 +28,7 @@ resource "aws_subnet" "subnet-testeB" {
 
 resource "aws_network_acl" "acl_teste" {
   vpc_id = "${var.vpcteste}"
-  subnet_ids = [aws_subnet.subnet-testeA.id]
-    tags = {
-    name = "acl_teste"
-  }
-  ingress {
-    protocol   = -1
-    rule_no    = 100
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 0
-    to_port    = 0
-  }
-
-  egress {
-    protocol   = -1
-    rule_no    = 100
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 0
-    to_port    = 0
-  }
-
-
-egress {
-    protocol   = "tcp"
-    rule_no    = 200
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 443
-    to_port    = 443
-  }
-    ingress {
-    protocol   = "tcp"
-    rule_no    = 200
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 443
-    to_port    = 443
-  }
-  egress {
-    protocol   = "tcp"
-    rule_no    = 300
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 80
-    to_port    = 80
-  }
-    ingress {
-    protocol   = "tcp"
-    rule_no    = 300
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 80
-    to_port    = 80
-  }
-     
-}
-
-resource "aws_network_acl" "acl_teste" {
-  vpc_id = "${var.vpcteste}"
-  subnet_ids = [aws_subnet.subnet-testeB.id]
+  subnet_ids = [aws_subnet.subnet-testeA.id,aws_subnet.subnet-testeB]
     tags = {
     name = "acl_teste"
   }
