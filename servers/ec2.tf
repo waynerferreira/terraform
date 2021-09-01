@@ -69,7 +69,7 @@ resource "aws_instance" "k8s" {
 */
 
 resource "aws_instance" "k8stesteb" {
-    count = 0
+    count = "${var.servers}"
     ami = "ami-07d02ee1eeb0c996c"
     instance_type = "t2.micro"
     tags = {
