@@ -61,6 +61,7 @@ resource "aws_instance" "worker" {
     key_name = "${var.key_name}"
 }
 
+/*
 resource "aws_instance" "haproxy" {
     count = 1
     ami = "ami-07d02ee1eeb0c996c"
@@ -72,3 +73,4 @@ resource "aws_instance" "haproxy" {
     vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
     key_name = "${var.key_name}"
 }
+*/
