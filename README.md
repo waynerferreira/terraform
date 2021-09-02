@@ -148,3 +148,4 @@ Com isso as estruturas criadas e realizado os determinádos vínculos , acesso a
 E os acessos nas aplicações são realizado via dns:porta DNS do load Balancer porta da aplicação com mesma porta Target Group.
 
 Projetos futuros e com maior tempo, será utilizado Ferramenta Ansible para automatização de mais processos nas aplicações e vinculo com GITHUB ACTION, assim como feito na Estrutura do repositório do DESAFIO.
+
