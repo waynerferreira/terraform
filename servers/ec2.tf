@@ -85,7 +85,7 @@ resource "aws_instance" "master" {
     ami = "ami-07d02ee1eeb0c996c"
     instance_type = "t2.medium"
     tags = {
-        Name = "k8s${count.index}"
+        Name = "master${count.index}"
     }
     subnet_id = "${var.subnet-testeA}"
     vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
@@ -97,9 +97,21 @@ resource "aws_instance" "worker" {
     ami = "ami-07d02ee1eeb0c996c"
     instance_type = "t2.medium"
     tags = {
-        Name = "k8s${count.index}"
+        Name = "worker${count.index}"
     }
     subnet_id = "${var.subnet-testeB}"
+    vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
+    key_name = "${var.key_name}"
+}
+
+resource "aws_instance" "haproxy" {
+    count = 1
+    ami = "ami-07d02ee1eeb0c996c"
+    instance_type = "t2.micro"
+    tags = {
+        Name = "haproxy${count.index}"
+    }
+    subnet_id = "${var.subnet-testeA}"
     vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
     key_name = "${var.key_name}"
 }
