@@ -40,7 +40,7 @@ resource "aws_instance" "k8stesteb" {
 resource "aws_instance" "master" {
     count = "${var.servers}"
     ami = "ami-07d02ee1eeb0c996c"
-    instance_type = "t2.medium"
+    instance_type = "t2.micro"
     tags = {
         Name = "master${count.index}"
     }
@@ -52,7 +52,7 @@ resource "aws_instance" "master" {
 resource "aws_instance" "worker" {
     count = "${var.servers}"
     ami = "ami-07d02ee1eeb0c996c"
-    instance_type = "t2.medium"
+    instance_type = "t2.micro"
     tags = {
         Name = "worker${count.index}"
     }
@@ -62,7 +62,7 @@ resource "aws_instance" "worker" {
 }
 
 
-resource "aws_instance" "novamaster" {
+/*resource "aws_instance" "novamaster" {
     count = 1
     ami = "ami-07d02ee1eeb0c996c"
     instance_type = "t2.medium"
@@ -73,3 +73,4 @@ resource "aws_instance" "novamaster" {
     vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
     key_name = "${var.key_name}"
 }
+*/
