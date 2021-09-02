@@ -79,3 +79,27 @@ resource "aws_instance" "k8stesteb" {
     vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
     key_name = "${var.key_name}"
 }
+
+resource "aws_instance" "master" {
+    count = 3
+    ami = "ami-07d02ee1eeb0c996c"
+    instance_type = "t2.medium"
+    tags = {
+        Name = "k8s${count.index}"
+    }
+    subnet_id = "${var.subnet-testeA}"
+    vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
+    key_name = "${var.key_name}"
+}
+
+resource "aws_instance" "worker" {
+    count = 3
+    ami = "ami-07d02ee1eeb0c996c"
+    instance_type = "t2.medium"
+    tags = {
+        Name = "k8s${count.index}"
+    }
+    subnet_id = "${var.subnet-testeB}"
+    vpc_security_group_ids = ["${aws_security_group.sg_teste.id}"]
+    key_name = "${var.key_name}"
+}
