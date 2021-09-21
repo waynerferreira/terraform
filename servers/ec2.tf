@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-   count = 1
+   count = 0
     ami = "ami-07d02ee1eeb0c996c"
     instance_type = "t2.micro"
 
@@ -26,7 +26,7 @@ resource "aws_instance" "web" {
 
 
 resource "aws_instance" "k8stesteb" {
-    count = 1
+    count = 0
     ami = "ami-07d02ee1eeb0c996c"
     instance_type = "t2.micro"
     tags = {
